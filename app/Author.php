@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use App\Author;
 class Author extends Model
 {
     protected $guarded = [];
@@ -13,8 +14,7 @@ class Author extends Model
     {
         $this->attributes['dob'] = Carbon::parse($dob);
     }
-
-
+    
     public function path()
     {
        return '/author/'.$this->id;
